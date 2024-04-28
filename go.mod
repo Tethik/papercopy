@@ -2,10 +2,13 @@ module github.com/Tethik/go-template
 
 go 1.21.1
 
-require github.com/stretchr/testify v1.8.4
+require github.com/raceresult/gopdf v1.0.101
 
 require (
-	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
+	github.com/boombuler/barcode v1.0.1 // indirect
+	github.com/hhrutter/lzw v1.0.0 // indirect
+	github.com/raceresult/tiff v1.0.1 // indirect
+	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e // indirect
+	golang.org/x/image v0.15.0 // indirect
+	golang.org/x/text v0.14.0 // indirect
 )

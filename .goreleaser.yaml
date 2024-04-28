@@ -16,7 +16,8 @@ before:
     # - go generate ./...
 
 builds:
-  - env:
+  - id: papercopy
+    env:
       - CGO_ENABLED=0
     goos:
       - linux
@@ -27,9 +28,26 @@ builds:
       - arm
       - arm64
     # main entrypoint of the app
-    main: ./cmd/example/example.go
+    main: ./cmd/papercopy/main.go
     # the name of the binary
-    binary: example
+    binary: papercopy
+    ldflags:
+      - -s -w -X main.version={{.Version}} -X main.commit={{.ShortCommit}} -X main.date={{.Date}}
+  - id: niceware
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm
+      - arm64
+    # main entrypoint of the app
+    main: ./cmd/niceware/main.go
+    # the name of the binary
+    binary: niceware
     ldflags:
       - -s -w -X main.version={{.Version}} -X main.commit={{.ShortCommit}} -X main.date={{.Date}}
 

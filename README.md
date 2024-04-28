@@ -1,38 +1,15 @@
-# Go template
+# Papercopy
 
-My own minimalist template for setting up a new Go project.
+Tool to generate a papercopy of cryptographic keys in a PDF format.
 
-## Setup 🚀
+**☢️⚠️ Currently being prototyped. Not production ready. You've been warned.**
 
-- [ ] Besides the standard go tooling, ensure you have [goreleaser](https://goreleaser.com/) and `make` installed
-- [ ] Copy the template (e.g. via github)
-- [ ] Modify default code. Find and replace `github.com/Tethik/go-template`. Rename `example`.
-- [ ] Modify `main: ./cmd/example/example.go` and `binary: app` in `.goreleaser.yaml`
-
-### Github release workflow
-
-Ensure you set `Actions -> Workflow permissions` to `Read and write permissions`
+![what the pdf looks like](paper-copy.svg)
 
 ## Usage 🧑‍💻
 
-- `make` or `make single-build` - build for just your arch. Outputs in `dist/`.
-- `make build` - to build for all archs
-- `make test` - to run tests
+The repo comes with two binaries. Download from github release page or build it yourself via `make`.
 
-### Releases
+* `niceware` to encode bytes to a niceware string. `niceware -d` to decode a niceware string. 
+* `papercopy` to encode and create a (soon to be) neat PDF to which will keep your key.
 
-To create a new release:
-
-```sh
-git tag -a vX.Y.Z # set your semantic version here
-git push origin vX.Y.Z
-```
-
-Alternatively you can a manual release via make (not tested tbh)
-
-`make release`
-
-### References 📜
-
-- [Repo by @nobe4 which this steals a bunch from](https://github.com/nobe4/safe)
-- [Golang Standards Project Layout](https://github.com/golang-standards/project-layout)
