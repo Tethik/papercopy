@@ -1,4 +1,4 @@
-module github.com/Tethik/go-template
+module github.com/Tethik/papercopy
 
 go 1.21.1
 
